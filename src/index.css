@@ -11,3 +11,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* Style of box of Field */
+.Field {
+  width: 300px;
+  height: 300px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  gap: 5px;
+  margin: 20px auto;
+}
+
+.containerOfBoxField {
+  width: 100%;
+  height: 100%;
+
+  border: 2px solid black;
+  background-color: #ccc;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.textOfBox {
+  background-color: transparent;
+}

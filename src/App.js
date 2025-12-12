@@ -1,9 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import './index.css';
+//Components
+import {BoxOfField} from './Components/BoxOfField';
+import {Field} from './Components/Field';
+//Other functions of React
+import { useState } from "react";
 
 function App() {
   return (
     <div className="App">
+   
+    {/* <h1>Test h1</h1>
+    <MyButton />    */}
+      <Field />
+
+      {/*       
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -17,9 +28,20 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
+
+function MyButton() {
+  return ( 
+    <button>
+      test Button.
+    </button>
+  )
+}
+
+
+
 
 export default App;

@@ -1,34 +1,34 @@
 import './App.css';
 import './index.css';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 //Components
-import {BoxOfField} from './Components/BoxOfField';
-import {Field} from './Components/Field';
+import {BoxOfField, BoxOfFieldOnClick} from './ComponentsTest/BoxOfField';
+import {Field} from './ComponentsTest/Field';
 //Other functions of React
 import { useState } from "react";
+import SideChoice from './Sites/SideChoice/SideChoice';
+import ProtectedRoute from './Sites/ProtectedRoute';
+import { InitComponent } from './ComponentsTest/InitComponent';
+
 
 function App() {
   return (
     <div className="App">
    
-    {/* <h1>Test h1</h1>
-    <MyButton />    */}
-      <Field />
+      {/* <h1>Test h1</h1>
+      <MyButton />    */}
+      {/* <BoxOfFieldOnClick id={1} currentSymbol='x'/> */}
+      {/* <Router>
+        <nav>
+          <Link to="/">Home</Link> | <Link to="/side-choice">Side Choice</Link>
+        </nav>
+        <Routes>
+          <Route path="/" element={<ProtectedRoute></ProtectedRoute>} />
+          <Route path="/side-choice" element={<SideChoice/>} />
+        </Routes>
+      </Router> */}
 
-      {/*       
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+      <InitComponent name="Player 1" side="X"/>
     </div>
   );
 }

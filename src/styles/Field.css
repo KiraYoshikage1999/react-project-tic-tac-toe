@@ -1,0 +1,60 @@
+/* Style of the board (Field) and its cells */
+.Field {
+  /* responsive square board */
+  width: min(90vw, 360px);
+  aspect-ratio: 1 / 1; /* keep board square */
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 12px; /* space between blocks (10-15px range) */
+
+  margin: 20px auto;
+
+  /* light gray background for the whole board */
+  background-color: #C7C7C7;
+
+  /* bold outer border (10-15px). using 12px as mid value */
+    border: 12px solid transparent;
+    border-image: linear-gradient(to bottom right, #0B0B0B 40%, #C7C7C7 100%) 1;
+    /* border-image-slice: 1; */
+    border-radius: 14px;
+    padding: 12px; /* inset so cells don't touch the border */
+    box-sizing: border-box;
+}
+
+.containerOfBoxField {
+  width: 100%;
+  height: 100%;
+
+  /* allow cells to be sized by grid, not by content */
+  min-width: 0;
+  min-height: 0;
+
+  /* remove hard borders between cells to show a single outer border */
+  border: none;
+  background-color: #ffffff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* scale with viewport while staying inside the cell */
+  font-size: clamp(20px, 6vmin, 48px);
+  font-weight: 700;
+  color: #111827;
+  user-select: none;
+  border-radius: 8px;
+  transition: background-color 120ms ease, transform 80ms ease;
+  overflow: hidden;
+  /* box-shadow: 0 1px 2px rgba(0,0,0,0.04) inset; */
+}
+
+.containerOfBoxField:active {
+  transform: scale(0.98);
+}
+
+.textOfBox {
+  margin: 0;
+  line-height: 1;
+  background-color: transparent;
+}

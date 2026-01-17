@@ -18,8 +18,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #fafafa;
-  color: #111827;
+  background: linear-gradient(to bottom right, #0B0B0B 40%, #C21A82 100%);
+  
 }
 
 code {
@@ -28,50 +28,3 @@ code {
 }
 
 
-/* Style of box of Field */
-.Field {
-  /* responsive square board */
-  width: min(90vw, 360px);
-  aspect-ratio: 1 / 1; /* keep board square */
-
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 8px;
-
-  margin: 20px auto;
-}
-
-.containerOfBoxField {
-  width: 100%;
-  height: 100%;
-
-  /* allow cells to be sized by grid, not by content */
-  min-width: 0;
-  min-height: 0;
-
-  border: 2px solid #222;
-  background-color: #f3f4f6;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* scale with viewport while staying inside the cell */
-  font-size: clamp(20px, 6vmin, 48px);
-  font-weight: 700;
-  color: #111827;
-  user-select: none;
-  border-radius: 8px;
-  transition: background-color 120ms ease, transform 80ms ease;
-  overflow: hidden;
-}
-
-.containerOfBoxField:active {
-  transform: scale(0.98);
-}
-
-.textOfBox {
-  margin: 0;
-  line-height: 1;
-  background-color: transparent;
-}

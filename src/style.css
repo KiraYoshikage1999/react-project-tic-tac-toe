@@ -1,0 +1,35 @@
+/* apply to the document body */
+body {
+  
+  margin: 0;
+}
+
+.side {
+  z-index: 10;
+}
+
+.side-left {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 64px;
+  /* background image: if file is under src/styles/PhotoFolder, this relative URL will be resolved by the bundler */
+  background-image: url('./styles/PhotoFolder/BackgroundPhoto.jpg');
+  background-size: cover;
+  background-position: center;
+  border-right: 1px solid rgba(0,0,0,0.08);
+}
+
+.side-right {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 64px;
+  background-image: url('./styles/PhotoFolder/BackgroundPhoto.jpg');
+  background-size: cover;
+  background-position: center;
+  border-left: 1px solid rgba(0,0,0,0.08);
+}
+

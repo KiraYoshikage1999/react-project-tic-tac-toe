@@ -11,7 +11,7 @@ export class User extends React.Component {
         this.state = {count: 0};
         let userTurn = false;
         //let name = props.name;
-        //let symbolOfUser = props.SideSymbol;
+        let symbolOfUser = props.SideSymbol;
         
     }
 

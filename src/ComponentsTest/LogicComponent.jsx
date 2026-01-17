@@ -5,7 +5,7 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { InitComponent } from './InitComponent';
 
 
-export function LogicComponent({ arrayOfField = [] }) {
+export function LogicComponent({ arrayOfField = [], onWin }) {
   useEffect(() => {
     if (!Array.isArray(arrayOfField) || arrayOfField.length < 9) return;
 
@@ -27,8 +27,9 @@ export function LogicComponent({ arrayOfField = [] }) {
         arrayOfField[a] === arrayOfField[c]
       ) {
         
-        InitComponent.gameOn = false;
-        console.log('You win');
+        // InitComponent.gameOn = false;
+        const winner = checkWinCondition(arrayOfField[a]);
+        if (typeof onWin === 'function') onWin(winner);
         return;
       }
     }
@@ -39,10 +40,10 @@ export function LogicComponent({ arrayOfField = [] }) {
 
 function checkWinCondition(Symbol) { 
   if(Symbol === "X") {
-    console.log("Player 1 Win!");
+    return "Player 1";
   }
   else if(Symbol == "O") {
-    console.log("Player 2 win!");
+    return "Player 2";
   }
   else { }
 }

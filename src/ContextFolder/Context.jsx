@@ -1,6 +1,6 @@
 import { createContext, useReducer } from "react";
 import { reducer } from "../Reducer/reducer";
-import { setCell } from "../Reducer/actions";
+import { setCell, clearCells } from "../Reducer/actions";
 
 export const XOContext = createContext();
 
@@ -17,7 +17,12 @@ export function Context({children}) {
         dispatch(setCell(index, 'O'));
     }
 
-    const value = { cells, setXCell, setOCell };
+    const clearField = () => {
+        console.log("Clearing field");
+        dispatch(clearCells());
+    }
+
+    const value = { cells, setXCell, setOCell, clearField };
     return (
         <XOContext.Provider value={value}>
             {children}

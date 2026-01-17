@@ -1,17 +1,20 @@
 import './App.css';
 import './index.css';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import './styles/Field.css';
+import './style.css'
+// import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 //Components
-import {BoxOfField, BoxOfFieldOnClick} from './ComponentsTest/BoxOfField';
-import {Field} from './ComponentsTest/Field';
-//Other functions of React
-import { useState } from "react";
-import SideChoice from './Sites/SideChoice/SideChoice';
-import ProtectedRoute from './Sites/ProtectedRoute';
+// import {BoxOfField, BoxOfFieldOnClick} from './ComponentsTest/BoxOfField';
+// import {Field} from './ComponentsTest/Field';
+// //Other functions of React
+// import { useState } from "react";
+// import SideChoice from './Sites/SideChoice/SideChoice';
+// import ProtectedRoute from './Sites/ProtectedRoute';
 import { InitComponent } from './ComponentsTest/InitComponent';
 
 
 function App() {
+  
   return (
     <div className="App">
    
@@ -28,13 +31,15 @@ function App() {
         </Routes>
       </Router> */}
 
-      <InitComponent name="Player 1" side="X"/>
+      <div className="side side-left" />
+      <div className="side side-right" />
+      <InitComponent name="Player 1" side="X" />
     </div>
   );
 }
 
 function MyButton() {
-  return ( 
+  return (
     <button>
       test Button.
     </button>

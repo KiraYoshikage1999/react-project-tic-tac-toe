@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
-import SideChoice from './Sites/SideChoice/SideChoiceSite';
+
 
 test('renders learn react link', () => {
   
